@@ -9,3 +9,13 @@ jobs:
     steps:
       - name: Greet the User
         run: echo "Hello World!"
+jobs:
+  greet:
+    env:
+      MY_ENV: "John Doe"  # Переменная окружения
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo "Hello $MY_ENV"
+          echo "Hello $GITHUB_ACTOR"
