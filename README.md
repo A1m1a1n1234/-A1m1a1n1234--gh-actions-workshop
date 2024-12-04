@@ -73,3 +73,10 @@ Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 ## Licensing
 
 This repo is licensed under MIT for code and CC BY-SA 4.0 for documentation (`docs/` folder and the `README.md.`). See the [LICENSE](./LICENSE) File for more information.
+steps:
+  - name: Greet the User
+    run: echo "Hello World!"
+  - run: ls -l  # Показать файлы до checkout
+  - uses: actions/checkout@v2  # Используем действие для клонирования кода
+  - run: ls -l  # Показать файлы после checkout
+
