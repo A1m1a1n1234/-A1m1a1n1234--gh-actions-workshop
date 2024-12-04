@@ -1,8 +1,9 @@
 name: Hello World Training Workflow
 
 on:
-  workflow_dispatch:
-
+ workflow_dispatch:  # Для ручного запуска
+  issues:             # Для запуска при событиях с Issue
+    types: [opened, edited]  # Только при создании или редактировании Issue
 jobs:
   greet:
     runs-on: ubuntu-latest
